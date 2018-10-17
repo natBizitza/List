@@ -10,9 +10,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int counter = 0;
-            string number;
-            List<string> compra = new List<string>();
+            FamousSinger f1 = new FamousSinger("MOTION PICTURE CAST RECORDING", "THE GREATEST SHOWMAN");
+            FamousSinger f2 = new FamousSinger("GEORGE EZRA", "STAYING AT TAMARA'S");
+
+            List<FamousSinger> singers = new List<FamousSinger>();
+
+            singers.Add(f1);
+            singers.Add(f2);
+
+            // TODO: method display singers
+           
+            //int counter = 0;
+            //string number;
+            //List<string> compra = new List<string>();
 
             //CreateList(compra);
             //OrderList(compra);
@@ -23,52 +33,52 @@ namespace ConsoleApp1
             //ShowList(compra);
             //CountElements(compra);
 
-            List<double> decimals = new List<double>();
-            List<int> ints = new List<int>();
+            //List<double> decimals = new List<double>();
+            //List<int> ints = new List<int>();
 
             //Console.WriteLine("Type a number:");
             //number = Convert.ToInt32(Console.ReadLine());
 
-            do
-            {
-                Console.WriteLine("Type a number:");
-                number = Console.ReadLine();
+            //do
+            //{
+            //    Console.WriteLine("Type a number:");
+            //    number = Console.ReadLine();
 
-                if (number.Contains(".") || number.Contains(","))
-                {
-                    decimals.Add(Convert.ToDouble(number));
-                    counter++;
-                    Console.WriteLine("One more to decimals!");
-                    //TODO: hijack errors 
-                }
-                else if (Convert.ToInt32(number) > 0)
-                {
-                    //number = Convert.ToInt32(Console.ReadLine);
-                    ints.Add(Convert.ToInt32(number));
-                    counter++;
+            //    if (number.Contains(".") || number.Contains(","))
+            //    {
+            //        decimals.Add(Convert.ToDouble(number));
+            //        counter++;
+            //        Console.WriteLine("One more to decimals!");
+            //        //TODO: hijack errors 
+            //    }
+            //    else if (Convert.ToInt32(number) > 0)
+            //    {
+            //        //number = Convert.ToInt32(Console.ReadLine);
+            //        ints.Add(Convert.ToInt32(number));
+            //        counter++;
 
-                    Console.WriteLine("One more to ints!");
-                }
+            //        Console.WriteLine("One more to ints!");
+            //    }
 
-            } while (Convert.ToDouble(number)>0);
+            //} while (Convert.ToDouble(number)>0);
 
-            CountInts(ints);
+            //CountInts(ints);
 
-            CountDecimals(decimals);
+            //CountDecimals(decimals);
 
-            int sumOfInts =ints.Sum();
-            Console.WriteLine("Sum of ints." + sumOfInts);
+            //int sumOfInts =ints.Sum();
+            //Console.WriteLine("Sum of ints." + sumOfInts);
 
-            double sumOfDecimals = decimals.Sum();
-            Console.WriteLine("Sum of decimals." + sumOfDecimals);
+            //double sumOfDecimals = decimals.Sum();
+            //Console.WriteLine("Sum of decimals." + sumOfDecimals);
 
-            double sumAll = Convert.ToDouble(sumOfInts) + sumOfDecimals;
+            //double sumAll = Convert.ToDouble(sumOfInts) + sumOfDecimals;
 
-            Console.WriteLine("Sum of all numbers. " + sumAll);
+            //Console.WriteLine("Sum of all numbers. " + sumAll);
 
-            double average = sumAll / (ints.Count() + decimals.Count());
+            //double average = sumAll / (ints.Count() + decimals.Count());
 
-            Console.WriteLine("Average is " + average);
+            //Console.WriteLine("Average is " + average);
 
             Console.ReadKey();
         }
