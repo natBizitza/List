@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            int counter = 0;
             string number;
             List<string> compra = new List<string>();
 
@@ -36,18 +37,21 @@ namespace ConsoleApp1
                 if (number.Contains(".") || number.Contains(","))
                 {
                     decimals.Add(Convert.ToDouble(number));
-
+                    counter++;
                     Console.WriteLine("One more to decimals!");
                 }
                 else if (Convert.ToInt32(number) > 0)
                 {
                     //number = Convert.ToInt32(Console.ReadLine);
                     ints.Add(Convert.ToInt32(number));
+                    counter++;
 
                     Console.WriteLine("One more to ints!");
                 }
 
             } while (Convert.ToDouble(number)>0);
+
+            CountInts(ints);
 
             Console.ReadKey();
         }
@@ -85,6 +89,14 @@ namespace ConsoleApp1
         public static void CountElements(List<String> compra)
         {
            int cuantity = compra.Count();
+
+            Console.WriteLine("You have " + cuantity + " elements.");
+            Console.ReadLine();
+        }
+
+        public static void CountInts(List<int> ints)
+        {
+            int cuantity = ints.Count();
 
             Console.WriteLine("You have " + cuantity + " elements.");
             Console.ReadLine();
