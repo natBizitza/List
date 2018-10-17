@@ -12,6 +12,7 @@ namespace ConsoleApp1
         {
             FamousSinger f1 = new FamousSinger("MOTION PICTURE CAST RECORDING", "THE GREATEST SHOWMAN");
             FamousSinger f2 = new FamousSinger("GEORGE EZRA", "STAYING AT TAMARA'S");
+            FamousSinger f3 = new FamousSinger("", "");
 
             List<FamousSinger> singers = new List<FamousSinger>();
 
@@ -19,7 +20,29 @@ namespace ConsoleApp1
             singers.Add(f2);
 
             // TODO: method display singers
-           
+            Console.WriteLine("List of Famous Singers: ");
+            foreach (FamousSinger x in singers)
+            {
+                Console.WriteLine(x.MostrarDatos());
+            }
+
+            Console.WriteLine("Introduce a singer:");
+            Console.ReadLine();
+            string newSinger = f3.GetName();
+            Console.WriteLine("Name the best selling album:");
+            Console.ReadLine();
+
+            string newAlbum = f3.GetBestSellingAlbum();
+
+            singers.Add(f3);
+
+            Console.WriteLine("List of Famous Singers: ");
+            foreach (FamousSinger x in singers)
+            {
+                Console.WriteLine(x.MostrarDatos());
+            }
+
+
             //int counter = 0;
             //string number;
             //List<string> compra = new List<string>();
@@ -134,6 +157,14 @@ namespace ConsoleApp1
             int cuantity = decimals.Count();
 
             Console.WriteLine("You have " + cuantity + " decimals.");
+            Console.ReadLine();
+        }
+        public static void ShowSingers(List<FamousSinger> compra)
+        {
+            foreach (FamousSinger x in compra)
+            {
+                Console.WriteLine(x);
+            }
             Console.ReadLine();
         }
     }

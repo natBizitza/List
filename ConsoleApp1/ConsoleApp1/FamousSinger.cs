@@ -34,6 +34,22 @@ namespace ConsoleApp1
         {
             this.bestSellingAlbum = bestSellingAlbum;
         }
+        public string MostrarDatos()
+        {
+            string result = " ";
+            // we add here the quotation marks to add space between parameters
+            if (this.GetName() != " ")
+            {
+                Console.WriteLine("Singer and The Best Selling Album:");
+                result += this.GetName() + " ";
+            }
+            if (this.GetBestSellingAlbum() != "")
+            {
+                result += this.GetBestSellingAlbum() + " ";
+            }
+           
+            return result;
+        }
 
     }
 }
