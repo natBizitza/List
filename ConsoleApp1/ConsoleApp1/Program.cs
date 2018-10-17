@@ -39,6 +39,7 @@ namespace ConsoleApp1
                     decimals.Add(Convert.ToDouble(number));
                     counter++;
                     Console.WriteLine("One more to decimals!");
+                    //TODO: hijack errors 
                 }
                 else if (Convert.ToInt32(number) > 0)
                 {
@@ -52,6 +53,22 @@ namespace ConsoleApp1
             } while (Convert.ToDouble(number)>0);
 
             CountInts(ints);
+
+            CountDecimals(decimals);
+
+            int sumOfInts =ints.Sum();
+            Console.WriteLine("Sum of ints." + sumOfInts);
+
+            double sumOfDecimals = decimals.Sum();
+            Console.WriteLine("Sum of decimals." + sumOfDecimals);
+
+            double sumAll = Convert.ToDouble(sumOfInts) + sumOfDecimals;
+
+            Console.WriteLine("Sum of all numbers. " + sumAll);
+
+            double average = sumAll / (ints.Count() + decimals.Count());
+
+            Console.WriteLine("Average is " + average);
 
             Console.ReadKey();
         }
@@ -98,7 +115,15 @@ namespace ConsoleApp1
         {
             int cuantity = ints.Count();
 
-            Console.WriteLine("You have " + cuantity + " elements.");
+            Console.WriteLine("You have " + cuantity + " ints.");
+            Console.ReadLine();
+        }
+
+        public static void CountDecimals(List<double> decimals)
+        {
+            int cuantity = decimals.Count();
+
+            Console.WriteLine("You have " + cuantity + " decimals.");
             Console.ReadLine();
         }
     }
