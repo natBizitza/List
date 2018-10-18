@@ -20,27 +20,34 @@ namespace ConsoleApp1
             singers.Add(f2);
 
             // TODO: method display singers
+            string newSinger = "", reply = "";
             Console.WriteLine("List of Famous Singers: ");
             foreach (FamousSinger x in singers)
             {
                 Console.WriteLine(x.MostrarDatos());
             }
 
-            Console.WriteLine("Introduce a singer:");
-            Console.ReadLine();
-            string newSinger = f3.GetName();
-            Console.WriteLine("Name the best selling album:");
-            Console.ReadLine();
-
-            string newAlbum = f3.GetBestSellingAlbum();
-
-            singers.Add(f3);
-
-            Console.WriteLine("List of Famous Singers: ");
-            foreach (FamousSinger x in singers)
+            do
             {
-                Console.WriteLine(x.MostrarDatos());
-            }
+                Console.WriteLine("Introduce a singer.");
+                newSinger = Console.ReadLine();
+                Console.WriteLine("Name the best selling album:");
+                string newAlbum = Console.ReadLine();
+                f3.SetName(newSinger);
+                f3.SetbestSellingAlbum(newAlbum);
+                singers.Add(f3);
+
+                Console.WriteLine("List of Famous Singers: ");
+                foreach (FamousSinger x in singers)
+                {
+                    Console.WriteLine(x.MostrarDatos());
+                }
+
+                Console.WriteLine("Would you like to introduce one more singer? If not - type 'no'.");
+                reply = Console.ReadLine();
+
+            } while (reply.ToLower() != "no");
+            
 
 
             //int counter = 0;
