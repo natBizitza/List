@@ -21,7 +21,7 @@ namespace Elene_de_Troya
         {
             this.name = name;
 
-            if(verifyAge())
+            if(VerifyAge())
             {
                 Console.WriteLine(this.age);
             }
@@ -30,7 +30,7 @@ namespace Elene_de_Troya
                 Console.WriteLine(25);
             }
 
-            if(verifyStrength())
+            if(VerifyStrength())
             {
                 Console.WriteLine(this.strength);
             }
@@ -98,26 +98,28 @@ namespace Elene_de_Troya
             this.dead = dead;
         }
 
-        public void withdrawBoolDead()
-        {
-            if(dead)
-            {
-                Console.WriteLine("DEAD.");
-            }
+        //public void giveInDead()
+        //{
+        //    if(dead)
+        //    {
+        //        Console.WriteLine("DEAD.");
+        //    }
 
-        }
+        //}
 
-        public void withdrawBoolInj()
+        public bool GiveInInj()
         {
-            if (dead)
+            if (injured)
             {
-                Console.WriteLine("INJURED.");
+                return true;
+                
             }
+            return false;
 
         }
 
         //boolean Verify Age (int age): that returns true if the age is between 15 and 60 (both inclusive), false otherwise.
-         public bool verifyAge()
+         public bool VerifyAge()
         {
             if(15 <= this.age || this.age <= 60 )
             {
@@ -130,7 +132,7 @@ namespace Elene_de_Troya
         }
 
         //boolean ComprobarFuerza(int f) returns true if the strength is between 1 and 10 (both inclusive), false otherwise.
-        public bool verifyStrength()
+        public bool VerifyStrength()
         {
             if (1 <= this.strength || this.strength <= 10)
             {
@@ -141,10 +143,11 @@ namespace Elene_de_Troya
                 return false;
             }
         }
-        //TODO: addone more method
-        public bool giveIn()
+        //TODO: add one more method
+        public bool GiveIn()
         {
-
+            Console.WriteLine("We never give up!");
+            return false;
         }
 
     }

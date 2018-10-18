@@ -19,7 +19,7 @@ namespace Elene_de_Troya
         public Griego(string name, int age, int strength)
         {
             this.name = name;
-            if (verifyAge())
+            if (VerifyAge())
             {
                 Console.WriteLine(this.age);
             }
@@ -28,7 +28,7 @@ namespace Elene_de_Troya
                 Console.WriteLine(25);
             }
 
-            if (verifyStrength())
+            if (VerifyStrength())
             {
                 Console.WriteLine(this.strength);
             }
@@ -96,7 +96,7 @@ namespace Elene_de_Troya
             this.dead = dead;
         }
 
-        public void withdrawBoolDead()
+        public void GiveInInJ()
         {
             if (dead)
             {
@@ -105,7 +105,7 @@ namespace Elene_de_Troya
 
         }
 
-        public void withdrawBoolInj()
+        public void WithdrawBoolInj()
         {
             if (dead)
             {
@@ -114,7 +114,7 @@ namespace Elene_de_Troya
 
         }
         //boolean Verify Age (int age): that returns true if the age is between 15 and 60 (both inclusive), false otherwise.
-        public bool verifyAge()
+        public bool VerifyAge()
         {
             if (15 <= this.age || this.age <= 60)
             {
@@ -127,7 +127,7 @@ namespace Elene_de_Troya
         }
 
         //boolean ComprobarFuerza(int f) returns true if the strength is between 1 and 10 (both inclusive), false otherwise.
-        public bool verifyStrength()
+        public bool VerifyStrength()
         {
             if (1 <= this.strength || this.strength <= 10)
             {
@@ -137,6 +137,15 @@ namespace Elene_de_Troya
             {
                 return false;
             }
+        }
+
+        public bool GiveIn()
+        {
+            if(injured && dead ==false)
+            {
+                Console.WriteLine("You can give up...");
+            }
+            return true;
         }
     }
 
