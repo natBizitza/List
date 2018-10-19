@@ -21,7 +21,7 @@ namespace Elene_de_Troya
         {
             this.name = name;
 
-            if(VerifyAge())
+            if(VerifyAge(age))
             {
                 Console.WriteLine(this.age);
             }
@@ -30,7 +30,7 @@ namespace Elene_de_Troya
                 Console.WriteLine(25);
             }
 
-            if(VerifyStrength())
+            if(VerifyStrength(strength))
             {
                 Console.WriteLine(this.strength);
             }
@@ -106,7 +106,7 @@ namespace Elene_de_Troya
         //    }
 
         //}
-
+        //TODO: change the method below
         public bool GiveInInj()
         {
             if (injured)
@@ -119,29 +119,23 @@ namespace Elene_de_Troya
         }
 
         //boolean Verify Age (int age): that returns true if the age is between 15 and 60 (both inclusive), false otherwise.
-         public bool VerifyAge()
+         public bool VerifyAge(int ag)
         {
             if(15 <= this.age || this.age <= 60 )
             {
                 return true;
             }
-            else
-            {
                 return false;
-            }
         }
 
         //boolean ComprobarFuerza(int f) returns true if the strength is between 1 and 10 (both inclusive), false otherwise.
-        public bool VerifyStrength()
+        public bool VerifyStrength(int strength)
         {
             if (1 <= this.strength || this.strength <= 10)
             {
                 return true;
             }
-            else
-            {
                 return false;
-            }
         }
         //TODO: add one more method
         public bool GiveIn()

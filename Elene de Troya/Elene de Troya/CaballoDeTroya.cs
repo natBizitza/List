@@ -21,6 +21,7 @@ namespace Elene_de_Troya
 
         public CaballoDeTroya(int ocupation)
         {
+         
             this.capacity = capacity;
             this.ocupation = ocupation;
             List<Griego> ocupants = new List<Griego>();

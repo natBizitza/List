@@ -11,15 +11,16 @@ namespace Elene_de_Troya
         static void Main(string[] args)
         {
             //Create a horse with a capacity of 20 warriors.
-            CaballoDeTroya c1 = new CaballoDeTroya(20);
+            CaballoDeTroya horse = new CaballoDeTroya(20);
+        
             //Create 3 Greek warriors (Achilles, Agamenon, and Ajax). 
-            Griego g1 = new Griego("Achilles", 30, 6);
-            Griego g2 = new Griego("Agamenon", 32, 6);
-            Griego g3 = new Griego("Ajax", 31, 6);
+            Griego griego1 = new Griego("Achilles", 30, 6);
+            Griego griego2 = new Griego("Agamenon", 32, 6);
+            Griego ggriego3 = new Griego("Ajax", 31, 6);
 
             //and mount them on the horse
-            Griego.AddGriegoInHorse(g1);
-
+            horse.AddGriegoInHorse(griego1);
+            Console.ReadLine();
 
         }
     }

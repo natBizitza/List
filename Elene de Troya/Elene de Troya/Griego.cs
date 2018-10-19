@@ -102,6 +102,10 @@ namespace Elene_de_Troya
             {
                 Console.WriteLine("DEAD.");
             }
+            else
+            {
+                Console.WriteLine("El guerrero debe estar herido y vivo para poder retirarse");
+            }
 
         }
 
